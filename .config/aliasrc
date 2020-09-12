@@ -1,0 +1,20 @@
+# ALIAS - KUBECTL COMMANDS
+alias info="kubectl cluster-info"
+alias view="kubectl config view"
+alias contexts="kubectl config get-contexts"
+alias context="kubectl config current-context"
+alias ns="kubectl get ns"
+alias services="kubectl get services"
+alias nodes="kubectl get nodes"
+alias pods="kubectl get pods --all-namespaces"
+
+# ALIAS - KUBECTL CONTEXTS
+alias aws-prod="kubectl config use-context aws-eks-cluster-prd"
+alias aws-stage="kubectl config use-context eks-devops-stage-001"
+alias aws-sandbox="kubectl config use-context eks-devops-sandbox-001"
+alias aws-develop="kubectl config use-context eks-devops-develop-001"
+alias aws-labs="kubectl config use-context eks-devops-labs-001"
+alias do-prod="kubectl config use-context do-k8s-cluster-prod-001"
+alias do-stage="kubectl config use-context do-k8s-cluster-staging-001"
+alias cnb-prod="kubectl config use-context eks-cnb-production-001"
+alias gc-develop="kubectl config use-context gke-devpos-develop-001"
