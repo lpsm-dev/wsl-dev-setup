@@ -1,4 +1,30 @@
 [user]
-	name = Lucca Pessoa
-	email = lpmatos@stefanini.com
-  
+  name  = Lucca Pessoa
+  email = luccapessoamatos@gmail.com
+[credential]
+  helper = store
+[core]
+  editor = vim
+[alias]
+  co  = checkout
+  c   = commit
+  cm  = commit -m
+  cam = commit -am
+  aa  = add -A .
+  br  = branch
+  st  = status
+  unstage = reset HEAD
+  last = log -1 HEAD
+  graph = log --oneline --graph --color --all --decorate
+  ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+  lg = log --color --graph --pretty=format:'%C(cyan)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+[color]
+  status = always
+[includeIf "gitdir:~/work"]
+  path = ./.gitconfig.local
+[url "ssh://git@git.stefanini.io/"]
+	insteadOf = https://git.stefanini.io/
+[url "ssh://git@gitlab.com/"]
+	insteadOf = https://gitlab.com/
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/

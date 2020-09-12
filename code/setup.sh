@@ -370,28 +370,6 @@ _EOF_
 
   OhMyZSHThemes
 
-  Status "👾 Config Kubectl"
-
-  export CONFIG_AWS_PROD=$HOME/.kube/config-aws-prod
-  export CONFIG_AWS_STAGE=$HOME/.kube/config-aws-stage
-  export CONFIG_AWS_SANDBOX=$HOME/.kube/config-aws-sandbox
-  export CONFIG_AWS_DEVELOP=$HOME/.kube/config-aws-develop
-  export CONFIG_AWS_LABS=$HOME/.kube/config-aws-labs
-
-  cat << EOF >> ~/.zshrc
-
-autoload -U colors; colors
-source /home/lucca/.oh-my-zsh/custom/plugins/zsh-kubectl-prompt/kubectl.zsh
-RPROMPT='%{$fg[blue]%}($ZSH_KUBECTL_PROMPT)%{$reset_color%}'
-
-export CONFIG_AWS_PROD=$HOME/.kube/config-aws-prod
-export CONFIG_AWS_STAGE=$HOME/.kube/config-aws-stage
-export CONFIG_AWS_SANDBOX=$HOME/.kube/config-aws-sandbox
-export CONFIG_AWS_DEVELOP=$HOME/.kube/config-aws-develop
-export CONFIG_AWS_LABS=$HOME/.kube/config-aws-labs
-export KUBECONFIG=$CONFIG_AWS_PROD:$CONFIG_AWS_STAGE:$CONFIG_AWS_SANDBOX:$CONFIG_AWS_DEVELOP:$CONFIG_AWS_LABS
-EOF
-
   Status "💀 Remember exec: source /home/lucca/.zshrc and Set or kubeconfig for each cluster"
 
   Status "👾 Config Ruby"
