@@ -1,21 +1,5 @@
-declare -A dirs
 declare -A files
 KUBECONFIG="$HOME/.kube/config"
-
-dirs=(
-  "$HOME/gitlab"
-  "$HOME/github"
-  "$HOME/work/stefanini"
-  "$HOME/work/stfcia"
-  "$HOME/work/personal"
-  "$HOME/study"
-  "$HOME/playground"
-  "$HOME/go"
-  "$HOME/.kube"
-  "$HOME/.ssh"
-)
-
-for dir in "${dirs[@]}"; do mkdir -p $dir; done
 
 files=(
   [CONFIG_AWS_PROD]=config-aws-prod
@@ -27,7 +11,9 @@ files=(
   [CONFIG_GCP_DEVELOP]=config-gcp-develop
 )
 
-for key value in ${(kv)files}; do touch $HOME/.kube/$value && export $key=$HOME/.kube/$value && KUBECONFIG+="$HOME/.kube/$value"; done
+for file in "${!files[@]}"; do
+  export $file=$HOME/.kube/${files[${file}]} && KUBECONFIG+="$HOME/.kube/${files[${file}]}"
+done
 
 # KUBECONFIG
 export KUBECONFIG=$KUBECONFIG

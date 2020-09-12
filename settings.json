@@ -11,28 +11,41 @@
   "defaultProfile": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
 
   // You can add more global application settings here.
-  // To learn more about global settings, visit https://aka.ms/terminal-global-settings
+  // To learn more about global settings, visit https://aka.ms/terminal-global-settings,
 
   // If enabled, selections are automatically copied to your clipboard.
   "copyOnSelect": false,
 
-  // If enabled, formatted data is also copied to your clipboard
+  // If enabled, formatted data is also copied to your clipboard.
   "copyFormatting": false,
 
-  "alwaysShowTabs": false,
-  "showTabsInTitlebar": false,
-  "startOnUserLogin": true,
-  "launchMode": "maximized",
+  // This defines the theme of the application.
+  "theme": "dark",
 
-  "alwaysShowTabs": false,
+  // Always show guides.
+  "alwaysShowTabs": true,
+
+  // Show/Hide to title bar.
   "showTabsInTitlebar": false,
+
+  // Start at startup.
   "startOnUserLogin": true,
+
+  // Guide width mode.
+  "tabWidthMode": "titleLength",
+
+  // Hide the "Close all tabs" pop-up.
+  "confirmCloseAllTabs": true,
+
+  // Size at startup.
+  "launchMode": "default",
+
+  // Initial Rown and Cols
   "initialRows": 30,
   "initialCols": 120,
+
+  // Define text in the title bar
   "showTerminalTitleInTitlebar": true,
-  "experimental_showTabsInTitlebar": true,
-  "requestedTheme": "dark",
-  
 
   // A profile specifies a command to execute paired with information about how it should look and feel.
   // Each one of them will appear in the 'New Tab' dropdown,
@@ -42,25 +55,84 @@
   {
       "defaults":
       {
-          "useAcrylic": true, 
-          "acrylicOpacity": 0.7,
-          "colorScheme": "Material Dark",
-          "fontFace": "DejaVuSansMono NF"
+          // Put settings here that you want to apply to all profiles.
       },
       "list":
       [
           {
-              "guid": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
-              "hidden": false,
-              "name": "Ubuntu-20.04",
-              "source": "Windows.Terminal.Wsl"
-              
-            },
+              // Make changes here to the powershell.exe profile.
+              "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+              "name": "Windows PowerShell",
+              "commandline": "powershell.exe",
+              "hidden": false
+          },
+          {
+              // Make changes here to the cmd.exe profile.
+              "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+              "name": "Command Prompt",
+              "commandline": "cmd.exe",
+              "hidden": false
+          },
           {
               "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
               "hidden": false,
               "name": "Azure Cloud Shell",
               "source": "Windows.Terminal.Azure"
+          },
+          {
+              "guid": "{1777cdf0-b2c4-5a63-a204-eb60f349ea7c}",
+              "hidden": false,
+              "name": "Alpine",
+              "source": "Windows.Terminal.Wsl"
+          },
+          {
+              "guid": "{58ad8b0c-3ef8-5f4d-bc6f-13e4c00f2530}",
+              "hidden": false,
+              "name": "Debian",
+              "source": "Windows.Terminal.Wsl",
+              "fontFace": "Hack NF",
+              "acrylicOpacity": 0.8,
+              "useAcrylic": true,
+              "colorScheme": "Ubuntu",
+              "padding": "0, 0, 0, 0",
+              "cursorColor": "#FFFFFF",
+              "cursorShape": "bar",
+              "tabTitle": "Debian",
+              "suppressApplicationTitle": true
+          },
+          {
+              "guid": "{46ca431a-3a87-5fb3-83cd-11ececc031d2}",
+              "hidden": false,
+              "name": "kali-linux",
+              "source": "Windows.Terminal.Wsl"
+          },
+          {
+              "guid": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
+              "hidden": false,
+              "name": "Ubuntu-20.04",
+              "source": "Windows.Terminal.Wsl",
+              "fontFace": "Hack NF",
+              "fontSize": "14",
+              "acrylicOpacity": 0.8,
+              "useAcrylic": true,
+              "colorScheme": "Ubuntu",
+              "padding": "0, 0, 0, 0",
+              "cursorColor": "#FFFFFF",
+              "cursorShape": "bar",
+              "tabTitle": "Ubuntu",
+              "suppressApplicationTitle": true
+          },
+          {
+              "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+              "hidden": false,
+              "name": "Ubuntu",
+              "source": "Windows.Terminal.Wsl"
+          },
+          {
+              "guid": "{c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40}",
+              "hidden": false,
+              "name": "Ubuntu-18.04",
+              "source": "Windows.Terminal.Wsl"
           }
       ]
   },
@@ -69,27 +141,27 @@
   // To learn more about color schemes, visit https://aka.ms/terminal-color-schemes
   "schemes": [
       {
-        "name": "Material Dark",
-        "foreground": "#E5E5E5",
-        "background": "#232322",
-        "black": "#212121",
-        "blue": "#134EB2",
-        "brightBlack": "#424242",
-        "brightBlue": "#54A4F3",
-        "brightCyan": "#26BBD1",
-        "brightGreen": "#7ABA3A",
-        "brightPurple": "#AA4DBC",
-        "brightRed": "#E83B3F",
-        "brightWhite": "#D9D9D9",
-        "brightYellow": "#FFEA2E",
-        "cyan": "#0E717C",
-        "green": "#457B24",
-        "purple": "#560088",
-        "red": "#B7141F",
-        "white": "#EFEFEF",
-        "yellow": "#F6981E"
+          "name": "Ubuntu",
+          "background": "#300a24",
+          "foreground": "#eeeeee",
+          "black": "#300a24",
+          "brightBlack": "#555753",
+          "blue": "#3465a4",
+          "brightBlue": "#729fcf",
+          "green": "#4e9a06",
+          "brightGreen": "#8ae234",
+          "cyan": "#06989a",
+          "brightCyan": "#34e2e2",
+          "red": "#cc0000",
+          "brightRed": "#ef2929",
+          "purple": "#75507b",
+          "brightPurple": "#ad7fa8",
+          "yellow": "#c4a000",
+          "brightYellow": "#fce94f",
+          "white": "#d3d7cf",
+          "brightWhite": "#eeeeee"
       }
-    ],
+  ],
 
   // Add custom keybindings to this array.
   // To unbind a key combination from your defaults.json, set the command to "unbound".
