@@ -1,0 +1,31 @@
+declare -A files
+KUBECONFIG="$HOME/.kube/config"
+
+files=(
+  [CONFIG_AWS_PROD]=config-aws-prod
+  [CONFIG_AWS_STAGE]=config-aws-stage
+  [CONFIG_AWS_SANDBOX]=config-aws-sandbox
+  [CONFIG_AWS_DEVELOP]=config-aws-develop
+  [CONFIG_AWS_LABS]=config-aws-labs
+  [CONFIG_CNB_PROD]=config-cnb-prod
+  [CONFIG_GCP_DEVELOP]=config-gcp-develop
+)
+
+for file in "${!files[@]}"; do
+  export $file=$HOME/.kube/${files[${file}]} && KUBECONFIG+="$HOME/.kube/${files[${file}]}"
+done
+
+# KUBECONFIG
+export KUBECONFIG=$KUBECONFIG
+
+# GOLANG
+export GOROOT=/home/lucca/.go
+export PATH=$GOROOT/bin:$PATH
+
+# NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# YARN
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"

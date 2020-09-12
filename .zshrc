@@ -29,7 +29,7 @@ plugins=(git zsh-syntax-highlighting zsh-kubectl-prompt)
 
 # Load if existent.
 [ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"
-[ -f "$HOME/.config/setup" ] && source "$HOME/.config/setup"
+[ -f "$HOME/.config/setup-zsh" ] && source "$HOME/.config/setup-zsh"
 [ -f "$ZSH_CUSTOM/plugins/zsh-kubectl-prompt/kubectl.zsh" ] && source "$ZSH_CUSTOM/plugins/zsh-kubectl-prompt/kubectl.zsh"
 [ -f "$ZSH/oh-my-zsh.sh" ] && source $ZSH/oh-my-zsh.sh
 

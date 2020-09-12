@@ -51,6 +51,8 @@ function CreateFiles(){
     "$HOME/.kube/config-gcp-develop"
     "$HOME/.ssh/config"
     "$HOME/.gitconfig"
+    "$HOME/work/stefanini/.gitconfig"
+    "$HOME/work/stfcia/.gitconfig"
   )
   for file in "${files[@]}"; do
     [ -f "$file" ] && Info "🚧 File $file alredy exist"; continue || Info "📝 Create file $file"; touch $file

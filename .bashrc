@@ -118,4 +118,4 @@ fi
 
 # Load if existent.
 [ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"
-[ -f "$HOME/.config/setup" ] && source "$HOME/.config/setup"
+[ -f "$HOME/.config/setup-bash" ] && source "$HOME/.config/setup-bash"
