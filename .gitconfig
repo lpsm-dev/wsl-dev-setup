@@ -20,8 +20,10 @@
   lg = log --color --graph --pretty=format:'%C(cyan)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 [color]
   status = always
-[includeIf "gitdir:~/work"]
-  path = ./.gitconfig.local
+[includeIf "gitdir:~/work/stefanini"]
+  path = ~/work/stefanini/.gitconfig
+[includeIf "gitdir:~/work/stfcia"]
+  path = ~/work/stfcia/.gitconfig
 [url "ssh://git@git.stefanini.io/"]
 	insteadOf = https://git.stefanini.io/
 [url "ssh://git@gitlab.com/"]
