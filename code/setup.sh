@@ -27,6 +27,14 @@ PURPLE="\033[0;95m"      # Purple
 CYAN="\033[0;96m"        # Cyan
 NC="\033[0;97m"          # White
 
+VERSION="1.0.0"
+START=$(date +%s)
+OS=`uname`
+[ "${OS}" = "Linux" ] && DATE_CMD="date" || DATE_CMD="gdate"
+DATE_INFO=$(${DATE_CMD} +"%Y-%m-%d %T")
+DATE_INFO_SHORT=$(${DATE_CMD} +"%A %B")
+USER=$(whoami)
+
 SUCESS=0
 BAD=1
 
@@ -37,6 +45,7 @@ GOLANG_VERSION="1.15.2"
 
 source ./settings/common.sh
 source ./settings/initial.sh
+source ./install/go.sh
 source ./install/node.sh
 source ./install/ruby.sh
 source ./install/general.sh
@@ -68,6 +77,7 @@ function Main(){
   CreateSSHFiles
   SetupSSH
   InstallCommonDependencies
+  Welcome
   InstallDevDependencies
   Install
   Verify

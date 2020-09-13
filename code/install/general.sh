@@ -28,4 +28,6 @@ function Install(){
   InstallRenv
   InstallRubyBuild
   InstallRuby
+
+  InstallGo
 }

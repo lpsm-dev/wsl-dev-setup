@@ -36,3 +36,17 @@ function Verify(){
     Status "🚨 Return status not expected - Verify. Exit...${NC}" && Abort "General exception";
   fi
 }
+
+function Welcome() {
+  echo -e "\n"
+  echo "Setup Environment" | figlet
+  echo -e "\n-------------------------------------------------"
+  echo "* Welcome ${USER}! It's now ${DATE_INFO_SHORT}"
+  echo -e "* ${DATE_INFO}"
+  echo -e "* System - ${OS}"
+  echo -e "*"
+  echo -e "* Autor: ${YELLOW}Lucca Pessoa da Silva Matos${YELLOW}${NC}"
+  echo -e "* Description: ${BLUE}This is my personal Ubuntu setup${BLUE}${NC}"
+  echo -e "* Version: ${YELLOW}${VERSION}${YELLOW}${NC}"
+  echo -e "-------------------------------------------------\n"
+}
