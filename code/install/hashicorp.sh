@@ -20,6 +20,7 @@ function SetupHashiCorp(){
 function InstallTerraform(){
   if ! [ -x "$(command -v terraform)" ]; then
     Status "👾 Install terraform "
+    SetupHashiCorp
     sudo apt-get install terraform && terraform -install-autocomplete
   else
     Status "💀 Terraform  alredy installed - Version $(terraform -v)... skipping"

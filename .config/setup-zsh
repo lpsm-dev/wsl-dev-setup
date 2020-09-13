@@ -17,7 +17,7 @@ files=(
 
 for file in "${!files[@]}"; do
   if [ -f ${files[${file}]} ]; then
-    export $file="${files[${file}]}" && KUBECONFIG+="${files[${file}]}"
+    export $file="${files[${file}]}" && KUBECONFIG+=":${files[${file}]}"
   fi
 done
 

@@ -35,8 +35,11 @@ function Install(){
 
   InstallGo
 
-  SetupHashiCorp
   InstallTerraform
   InstallPacker
   InstallVault
+
+  InstallKubectl
+  InstallHelm
+  InstallKubeval
 }

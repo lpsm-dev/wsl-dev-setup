@@ -47,6 +47,7 @@ source ./settings/common.sh
 source ./settings/initial.sh
 source ./install/go.sh
 source ./install/hashicorp.sh
+source ./install/k8s.sh
 source ./install/node.sh
 source ./install/ruby.sh
 source ./install/general.sh
