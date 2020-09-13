@@ -12,12 +12,16 @@
 
 function InstallCommonDependencies(){
   Status "👾 Install initial common dependencies"
-  sudo apt install git curl figlet zsh tree fzf unzip s3cmd make -y
+  local dependencies="git curl figlet zsh tree fzf unzip s3cmd make awscli"
+  sudo apt install $dependencies -y
 }
 
 function InstallDevDependencies(){
   Status "👾 Install initial dev Dependencies"
-  sudo apt install build-essential libssl-dev libffi-dev apt-transport-https zlib1g-dev libreadline-dev libyaml-dev libsqlite3-dev libxml2-dev libxslt1-dev libcurl4-openssl-dev -y
+  local dependencies="build-essential libssl-dev libffi-dev \
+    apt-transport-https zlib1g-dev libreadline-dev libyaml-dev \
+    libsqlite3-dev libxml2-dev libxslt1-dev libcurl4-openssl-dev"
+  sudo apt install $dependencies
 }
 
 function Install(){
