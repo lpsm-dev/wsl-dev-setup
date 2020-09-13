@@ -6,5 +6,6 @@
 
 * Ubuntu
 * ZSH
-* Oh My ZSH
 * Git
+* Node, Yarn, NVM
+* Ruby, Renv

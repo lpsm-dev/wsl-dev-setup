@@ -37,6 +37,8 @@ GOLANG_VERSION="1.15.2"
 
 source ./settings/common.sh
 source ./settings/initial.sh
+source ./install/node.sh
+source ./install/ruby.sh
 source ./install/general.sh
 
 # ==============================================================================
