@@ -29,11 +29,15 @@ NC="\033[0;97m"          # White
 
 SUCESS=0
 BAD=1
-CURRENT_DIR="$(dirname "$0")"
 
-source $CURRENT_DIR/common.sh
-source $CURRENT_DIR/initial.sh
-source $CURRENT_DIR/install.sh
+NVM_VERSION="0.35.3"
+NODE_VERSION="12.18.3"
+RUBY_VERSION="2.7.1"
+GOLANG_VERSION="1.15.2"
+
+source ./settings/common.sh
+source ./settings/initial.sh
+source ./install/general.sh
 
 # ==============================================================================
 # FUNCTIONS
@@ -43,10 +47,10 @@ function SetupSSH(){
   Status "👾 Setup SSH"
   eval $(ssh-agent)
   local files=(
-    ~/.ssh/id_rsa_github
-    ~/.ssh/id_rsa_gitlab
-    ~/.ssh/id_rsa_gitlab_stefanini
-    ~/.ssh/id_rsa_gitlab_stfcia
+    $HOME/.ssh/id_rsa_github
+    $HOME/.ssh/id_rsa_gitlab
+    $HOME/.ssh/id_rsa_gitlab_stefanini
+    $HOME/.ssh/id_rsa_gitlab_stfcia
   )
   for file in "${files[@]}"; do
     Info "📝 SSH Add $file" && ssh-add $file
@@ -63,6 +67,7 @@ function Main(){
   SetupSSH
   InstallCommonDependencies
   InstallDevDependencies
+  Install
   Verify
 }
 

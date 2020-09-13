@@ -27,7 +27,6 @@ function CreateFolders(){
     "$HOME/github"
     "$HOME/work/stefanini"
     "$HOME/work/stfcia"
-    "$HOME/work/personal"
     "$HOME/study"
     "$HOME/playground"
     "$HOME/go"
@@ -40,7 +39,7 @@ function CreateFolders(){
 
 function CreateFiles(){
   Status "👾 Creating Files"
-  local files=(
+  files=(
     "$HOME/.kube/config"
     "$HOME/.kube/config-aws-prod"
     "$HOME/.kube/config-aws-stage"
@@ -49,13 +48,23 @@ function CreateFiles(){
     "$HOME/.kube/config-aws-labs"
     "$HOME/.kube/config-cnb-prod"
     "$HOME/.kube/config-gcp-develop"
+    "$HOME/.kube/config-itsm-develop"
+    "$HOME/.kube/config-itsm-prod"
+    "$HOME/.kube/config-nutanix-faas"
     "$HOME/.ssh/config"
+    "$HOME/.config/aliasrc"
+    "$HOME/.config/setup-bash"
+    "$HOME/.config/setup-zsh"
     "$HOME/.gitconfig"
     "$HOME/work/stefanini/.gitconfig"
     "$HOME/work/stfcia/.gitconfig"
   )
   for file in "${files[@]}"; do
-    [ -f "$file" ] && Info "🚧 File $file alredy exist"; continue || Info "📝 Create file $file"; touch $file
+    if [ -f "$file" ]; then
+      Info "🚧 File $file alredy exist"
+    else
+      Info "📝 Create file $file" && touch $file
+    fi
   done
 }
 
@@ -69,6 +78,10 @@ function CreateSSHFiles(){
     ["$HOME/.ssh/id_rsa_gitlab_stfcia"]="lpmatos@stefanini.com"
   )
   for file in "${!ssh[@]}"; do
-    [ -f "$file" ] && Info "🚧 SSH File $file alredy exist"; continue || Info "📝 Create SSH file $file"; ssh-keygen -f $file -t rsa -b 4096 -C ${ssh[${file}]} -q -N ""
+    if [ -f "$file" ]; then
+      Info "🚧 SSH File $file alredy exist"
+    else
+      Info "📝 Create SSH file $file" && ssh-keygen -f $file -t rsa -b 4096 -C ${ssh[${file}]} -q -N ""
+    fi
   done
 }
