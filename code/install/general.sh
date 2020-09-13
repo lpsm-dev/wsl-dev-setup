@@ -30,4 +30,9 @@ function Install(){
   InstallRuby
 
   InstallGo
+
+  SetupHashiCorp
+  InstallTerraform
+  InstallPacker
+  InstallVault
 }

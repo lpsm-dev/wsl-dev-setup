@@ -46,6 +46,7 @@ GOLANG_VERSION="1.15.2"
 source ./settings/common.sh
 source ./settings/initial.sh
 source ./install/go.sh
+source ./install/hashicorp.sh
 source ./install/node.sh
 source ./install/ruby.sh
 source ./install/general.sh
@@ -71,15 +72,20 @@ function SetupSSH(){
 
 function Main(){
   Status "👾 Home: $HOME"
+
   InitialSetup
+
   CreateFolders
   CreateFiles
   CreateSSHFiles
+
   SetupSSH
+
   InstallCommonDependencies
   Welcome
   InstallDevDependencies
   Install
+
   Verify
 }
 
