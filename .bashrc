@@ -119,3 +119,5 @@ fi
 # Load if existent.
 [ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"
 [ -f "$HOME/.config/setup-bash" ] && source "$HOME/.config/setup-bash"
+
+complete -C /usr/bin/terraform terraform
