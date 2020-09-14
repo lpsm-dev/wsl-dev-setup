@@ -1,25 +1,20 @@
 declare -A files
-KUBECONFIG_PATH="$HOME/.kube"
-KUBECONFIG="$KUBECONFIG_PATH/config"
+KUBECONFIG="$HOME/.kube/config"
 
 files=(
-  [CONFIG_AWS_PROD]="$KUBECONFIG_PATH/config-aws-prod"
-  [CONFIG_AWS_STAGE]="$KUBECONFIG_PATH/config-aws-stage"
-  [CONFIG_AWS_SANDBOX]="$KUBECONFIG_PATH/config-aws-sandbox"
-  [CONFIG_AWS_DEVELOP]="$KUBECONFIG_PATH/config-aws-develop"
-  [CONFIG_AWS_LABS]="$KUBECONFIG_PATH/config-aws-labs"
-  [CONFIG_CNB_PROD]="$KUBECONFIG_PATH/config-cnb-prod"
-  [CONFIG_GCP_DEVELOP]="$KUBECONFIG_PATH/config-gcp-develop"
-  [CONFIG_ITSM_DEVELOP]="$KUBECONFIG_PATH/config-itsm-develop"
-  [CONFIG_ITSM_PROD]="$KUBECONFIG_PATH/config-itsm-prod"
-  [CONFIG_NUTANIX_FASS]="$KUBECONFIG_PATH/config-nutanix-faas"
+  [CONFIG_AWS_PROD]=config-aws-prod
+  [CONFIG_AWS_STAGE]=config-aws-stage
+  [CONFIG_AWS_SANDBOX]=config-aws-sandbox
+  [CONFIG_AWS_DEVELOP]=config-aws-develop
+  [CONFIG_AWS_LABS]=config-aws-labs
+  [CONFIG_CNB_PROD]=config-cnb-prod
+  [CONFIG_GCP_DEVELOP]=config-gcp-develop
+  [CONFIG_ITSM_DEVELOP]=config-itsm-develop
+  [CONFIG_ITSM_PROD]=config-itsm-prod
+  [CONFIG_NUTANIX_FASS]=config-nutanix-faas
 )
 
-for file in "${!files[@]}"; do
-  if [ -f ${files[${file}]} ]; then
-    export $file="${files[${file}]}" && KUBECONFIG+=":${files[${file}]}"
-  fi
-done
+for key value in ${(kv)files}; do touch $HOME/.kube/$value && export $key=$HOME/.kube/$value && KUBECONFIG+=":$HOME/.kube/$value"; done
 
 # KUBECONFIG
 export KUBECONFIG=$KUBECONFIG

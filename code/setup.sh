@@ -10,8 +10,6 @@
 
 # This option will make the script exit when there is an error
 set -o errexit
-# This option will make the script exit when are unset variables
-set -o nounset
 
 # ==============================================================================
 # VALUES
@@ -50,6 +48,7 @@ source ./install/hashicorp.sh
 source ./install/k8s.sh
 source ./install/node.sh
 source ./install/ruby.sh
+source ./install/ohmyzsh.sh
 source ./install/general.sh
 
 # ==============================================================================
@@ -74,6 +73,8 @@ function SetupSSH(){
 function Main(){
   Status "👾 Home: $HOME"
 
+  CheckShell
+
   InitialSetup
 
   CreateFolders
@@ -86,6 +87,8 @@ function Main(){
   Welcome
   InstallDevDependencies
   Install
+
+  SetupShell
 
   Verify
 }

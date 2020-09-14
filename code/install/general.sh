@@ -42,4 +42,6 @@ function Install(){
   InstallKubectl
   InstallHelm
   InstallKubeval
+
+  InstallZinit
 }

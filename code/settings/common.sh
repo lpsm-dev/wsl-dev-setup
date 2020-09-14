@@ -50,3 +50,21 @@ function Welcome() {
   echo -e "* Version: ${YELLOW}${VERSION}${YELLOW}${NC}"
   echo -e "-------------------------------------------------\n"
 }
+
+function CheckShell(){
+  if [ -n "$ZSH_VERSION" ]; then
+    Status "🚀 You are currently in zsh shell"
+  elif [ -n "$BASH_VERSION" ]; then
+    Status "🚀 You are currently in bash shell"
+  else
+    Status "🚨 Other shell"
+  fi
+}
+
+function SetupShell(){
+  read -rn 1 -p "Do you want to define zsh with your default shell? [y/N]: " DEFAULT
+  if [[ $DEFAULT =~ ^([Yy])$ ]]; then
+    Status "🚨 Setting zsh with your default shell"
+    chsh -s $(which zsh)
+  fi
+}
