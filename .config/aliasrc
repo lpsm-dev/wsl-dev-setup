@@ -18,3 +18,6 @@ alias do-prod="kubectl config use-context do-k8s-cluster-prod-001"
 alias do-stage="kubectl config use-context do-k8s-cluster-staging-001"
 alias cnb-prod="kubectl config use-context eks-cnb-production-001"
 alias gcp-develop="kubectl config use-context gke-devpos-develop-001"
+
+# ALIAS - LAB
+alias git=lab
