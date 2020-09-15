@@ -14,22 +14,6 @@
 
 ### Kraw Install
 
-```
-(
-  set -x; cd "$(mktemp -d)" &&
-  curl -fsSLO "https://storage.googleapis.com/krew/v0.2.1/krew.{tar.gz,yaml}" &&
-  tar zxvf krew.tar.gz &&
-  ./krew-"$(uname | tr '[:upper:]' '[:lower:]')_amd64" install \
-    --manifest=krew.yaml --archive=krew.tar.gz
-)
-
-# Then append the following to your .zshrc or bashrc
-export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
-
-# Then source your shell to pick up the path
-source ~/.zshrc # or ~/.bashrc
-```
-
 * kubectl krew install ctx
 * kubectl krew install ns
 
