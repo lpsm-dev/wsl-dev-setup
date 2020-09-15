@@ -6,6 +6,11 @@
 ## DATE: 12.09.2020
 # ==============================================================================
 
+GITHUB_PASSWORD=""
+GITLAB_TOKEN=""
+GITLAB_STEFANINI_TOKEN=""
+GITLAB_STFCIA_TOKEN=""
+
 # ==============================================================================
 # FUNCTIONS
 # ==============================================================================
@@ -15,19 +20,17 @@ function GitHubSSH(){
 }
 
 function GitLabSSH(){
-  curl -d '{"title":"$1","key":"'"$(cat ~/.ssh/$2.pub)"'"}' -H "Content-Type: application/json" https://$3/api/v4/user/keys?private_token=$4
+  curl -d '{"title":"gitlab","key":"'"$(cat ~/.ssh/$1.pub)"'"}' -H "Content-Type: application/json" https://$2/api/v4/user/keys?private_token=$3
 }
 
 function TestSSH(){
   ssh -T git@$1
 }
 
-GITHUB_PASSWORD=""
-GITLAB_TOKEN=""
-GITLAB_STEFANINI_TOKEN=""
-GITLAB_STFCIA_TOKEN=""
+function Main(){
+  GitHubSSH "lpmatos" $GITHUB_PASSWORD "github" "id_rsa_github"
+  GitLabSSH "id_rsa_gitlab" "gitlab.com" $GITLAB_TOKEN
+  GitLabSSH "id_rsa_gitlab_stefanini" "git.stefanini.io" $GITLAB_STEFANINI_TOKEN
+  GitLabSSH "id_rsa_gitlab_stfcia" "git.stfcia.com.br" $GITLAB_STFCIA_TOKEN
+}
 
-curl -u "lpmatos:$GITHUB_PASSWORD" --data "{\"title\": \"github\", \"key\": \"$(cat ~/.ssh/id_rsa_github.pub)\"}" https://api.github.com/user/keys
-curl -d '{"title":"gitlab","key":"'"$(cat ~/.ssh/id_rsa_gitlab.pub)"'"}' -H "Content-Type: application/json" https://gitlab.com/api/v4/user/keys?private_token=$GITLAB_TOKEN
-curl -d '{"title":"gitlab-stefanini","key":"'"$(cat ~/.ssh/id_rsa_gitlab_stefanini.pub)"'"}' -H "Content-Type: application/json" https://git.stefanini.io/api/v4/user/keys?private_token=$GITLAB_STEFANINI_TOKEN
-curl -d '{"title":"gitlab-stfcia","key":"'"$(cat ~/.ssh/id_rsa_gitlab_stfcia.pub)"'"}' -H "Content-Type: application/json" https://git.stfcia.com.br/api/v4/user/keys?private_token=$GITLAB_STFCIA_TOKEN
