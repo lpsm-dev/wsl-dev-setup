@@ -64,3 +64,9 @@ function InstallYarn(){
     Status "💀 Yarn alredy installed - Version $(yarn -v)... skipping"
   fi
 }
+
+function Node(){
+  InstallNVM
+  InstallNode
+  InstallYarn
+}

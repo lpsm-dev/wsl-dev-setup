@@ -25,27 +25,11 @@ function InstallDevDependencies(){
 }
 
 function Install(){
-  InstallPyenv
-  InstallPython
-
-  InstallNVM
-  InstallNode
-  InstallYarn
-
-  InstallRenv
-  InstallRubyBuild
-  InstallRuby
-
-  InstallGo
-
-  InstallTerraform
-  InstallPacker
-  InstallVault
-
-  InstallKubectl
-  InstallHelm
-  InstallKubeval
-  InstallKrew
-
+  Python
+  Node
+  Ruby
+  Go
+  Hashicorp
+  K8S
   InstallZinit
 }

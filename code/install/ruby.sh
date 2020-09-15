@@ -30,3 +30,15 @@ function InstallRuby(){
     Status "💀 Ruby alredy installed - Version $(ruby -v)... skipping"
   fi
 }
+
+function SetupRuby(){
+  Status "👾 Setup Ruby"
+  sudo gem install bundler rake
+}
+
+function Ruby(){
+  InstallRenv
+  InstallRubyBuild
+  InstallRuby
+  SetupRuby
+}

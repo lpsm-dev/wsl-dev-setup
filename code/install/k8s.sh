@@ -51,3 +51,10 @@ function InstallKrew(){
     Status "💀 Krew alredy installed... skipping"
   fi
 }
+
+function K8S(){
+  InstallKubectl
+  InstallHelm
+  InstallKubeval
+  InstallKrew
+}

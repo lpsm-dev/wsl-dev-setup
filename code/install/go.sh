@@ -24,3 +24,7 @@ function InstallGo(){
     Status "💀 Go alredy installed - Version: $(go version)... skipping"
   fi
 }
+
+function Go(){
+  InstallGo
+}

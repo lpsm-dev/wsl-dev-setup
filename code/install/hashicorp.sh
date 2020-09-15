@@ -44,3 +44,9 @@ function InstallVault(){
     Status "💀 Vault alredy installed - Version $(vault -v)... skipping"
   fi
 }
+
+function Hashicorp(){
+  InstallTerraform
+  InstallPacker
+  InstallVault
+}

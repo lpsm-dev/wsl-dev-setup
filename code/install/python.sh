@@ -37,3 +37,8 @@ function InstallPython(){
     fi
   fi
 }
+
+function Python(){
+  InstallPyenv
+  InstallPython
+}
