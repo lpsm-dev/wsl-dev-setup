@@ -52,9 +52,19 @@ function InstallKrew(){
   fi
 }
 
+function InstallK3D(){
+  if ! [ -x "$(command -v k3d)" ]; then
+    Status "👾 Install K3D"
+    curl -s https://raw.githubusercontent.com/rancher/k3d/main/install.sh | bash
+  else
+    Status "💀 K3D alredy installed... skipping"
+  fi
+}
+
 function K8S(){
   InstallKubectl
   InstallHelm
   InstallKubeval
   InstallKrew
+  InstallK3D
 }

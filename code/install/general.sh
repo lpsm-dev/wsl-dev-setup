@@ -24,7 +24,17 @@ function InstallDevDependencies(){
   sudo apt install $dependencies
 }
 
+function InstallLab(){
+  if ! [ -x "$(command -v lab)" ]; then
+    Status "👾 Install Lab"
+    curl -s https://raw.githubusercontent.com/zaquestion/lab/master/install.sh | sudo bash
+  else
+    Status "💀 Lab alredy installed... skipping"
+  fi
+}
+
 function Install(){
+  InstallLab
   Python
   Node
   Ruby
