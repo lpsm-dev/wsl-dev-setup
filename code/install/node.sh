@@ -17,9 +17,7 @@ function InstallNVM(){
     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
     [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
   fi
-
   type nvm &> /dev/null
-
   if [ $? -eq 0 ]; then
     Status "💀 NVM alredy installed - Version $NVM_VERSION... skipping"
   else
@@ -41,7 +39,8 @@ function InstallNVM(){
 function InstallNode(){
   if ! [ -x "$(command -v node)" ]; then
     Info "📝 Check if NVM alredy installed"
-    if ! [ -x "$(command -v nvm)" ]; then
+    type nvm &> /dev/null
+    if [ $? -eq 0 ]; then
       Status "👾 Install Node with NVM - Version $NODE_VERSION"
       nvm install $NODE_VERSION && nvm use $NODE_VERSION
     else

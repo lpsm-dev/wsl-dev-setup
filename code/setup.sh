@@ -36,6 +36,7 @@ USER=$(whoami)
 SUCESS=0
 BAD=1
 
+PYTHON_VERSION="3.8.2"
 NVM_VERSION="0.35.3"
 NODE_VERSION="12.18.3"
 RUBY_VERSION="2.7.1"
@@ -49,6 +50,7 @@ source ./install/k8s.sh
 source ./install/node.sh
 source ./install/ruby.sh
 source ./install/ohmyzsh.sh
+source ./install/python.sh
 source ./install/general.sh
 
 # ==============================================================================

@@ -62,9 +62,17 @@ function CheckShell(){
 }
 
 function SetupShell(){
-  read -rn 1 -p "Do you want to define zsh with your default shell? [y/N]: " DEFAULT
+  Status "📝 Do you want to define zsh with your default shell? [y/N]: "
+  read DEFAULT
   if [[ $DEFAULT =~ ^([Yy])$ ]]; then
     Status "🚨 Setting zsh with your default shell"
     chsh -s $(which zsh)
+  fi
+
+  Status "📝 Do you want exec other shell? [y/N]: "
+  read OTHER
+  if [[ $OTHER =~ ^([Yy])$ ]]; then
+    Status "🚨 Exec other shell"
+    exec $SHELL
   fi
 }
