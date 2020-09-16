@@ -1,6 +1,10 @@
 [user]
   name  = lpmatos
   email = luccapessoamatos@gmail.com
+[filter "lfs"]
+  clean = git-lfs clean %f
+  smudge = git-lfs smudge %f
+  required = true
 [credential]
   helper = store
 [core]
@@ -32,3 +36,8 @@
 	insteadOf = https://git.stefanini.io/
 [url "ssh://git@git.stfcia.com.br/"]
 	insteadOf = https://git.stfcia.com.br/
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
