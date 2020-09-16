@@ -12,7 +12,7 @@
 
 function InstallCommonDependencies(){
   Status "👾 Install initial common dependencies"
-  local dependencies="git curl figlet zsh tree fzf unzip s3cmd make awscli htop"
+  local dependencies="git curl figlet zsh tree fzf unzip s3cmd make awscli htop git-lfs"
   sudo apt install $dependencies -y
 }
 
