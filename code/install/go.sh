@@ -25,6 +25,20 @@ function InstallGo(){
   fi
 }
 
+# ==============================================================================
+# FUNCTIONS
+# ==============================================================================
+
+function InstallGitLeaks(){
+  if ! [ -x "$(command -v gitleaks)" ]; then
+    Status "👾 Install GitLeaks"
+    GO111MODULE=on go get github.com/zricethezav/gitleaks/v6
+  else
+    Status "💀 GitLeaks alredy installed... skipping"
+  fi
+}
+
 function Go(){
   InstallGo
+  InstallGitLeaks
 }
