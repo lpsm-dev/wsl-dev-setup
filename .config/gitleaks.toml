@@ -1,12 +1,14 @@
-[[rules]]
-  description = "Generic secret regex"
-  regex = '''secret(.{0,20})([0-9a-zA-Z-._{}$\/\+=]{20,120})'''
-  tags = ["key", "generic", "secret"]
+title = "gitleaks config"
 
 [[rules]]
 	description = "AWS Manager ID"
 	regex = '''(A3T[A-Z0-9]|AKIA|AGPA|AIDA|AROA|AIPA|ANPA|ANVA|ASIA)[A-Z0-9]{16}'''
 	tags = ["key", "AWS"]
+
+[[rules]]
+	description = "AWS Cred File Info"
+	regex = '''(?i)(aws_access_key_id|aws_secret_access_key)(.{0,20})?=.[0-9a-zA-Z\/+]{20,40}'''
+	tags = ["AWS"]
 
 [[rules]]
 	description = "AWS Secret Key"
@@ -128,9 +130,28 @@
 	regex = '''(?i)twilio(.{0,20})?SK[0-9a-f]{32}'''
 	tags = ["key", "twilio"]
 
-[allowlist]
-	description = "Allowlisted files"
-	files = ['''^\.?gitleaks.toml$''',
-	'''(.*?)(jpg|gif|doc|pdf|bin)$''',
-	'''(go.mod|go.sum)$''']
-  
+[[rules]]
+  description = "Generic secret regex"
+  regex = '''secret(.{0,20})([0-9a-zA-Z-._{}$\/\+=]{20,120})'''
+  tags = ["key", "generic", "secret"]
+
+[[rules]]
+	description = "Env Var"
+	regex = '''(?i)(api_key|apikey|secret|key|api|password|pw|host)=[0-9a-zA-Z-_{}]{4,120}'''
+
+[[rules]]
+	description = "Generic Credential"
+	regex = '''(?i)(dbpasswd|dbuser|dbname|dbhost|api_key|apikey|secret|api|password|user|guid|hostname|pw|auth)(.{0,20})?['|"][0-9a-zA-Z-_!{}/=]{4,120}['|"]'''
+	tags = ["key", "API", "generic"]
+
+[[rules]]
+	description = "WP-Config"
+	regex='''define(.{0,20})?(DB_CHARSET|NONCE_SALT|LOGGED_IN_SALT|AUTH_SALT|NONCE_KEY|DB_HOST|DB_PASSWORD|AUTH_KEY|SECURE_AUTH_KEY|LOGGED_IN_KEY|DB_NAME|DB_USER)(.{0,20})?['|"].{10,120}['|"]'''
+	tags = ["key", "API", "generic"]
+
+[Global]
+  file = '''(?i)(id_rsa|passwd|id_rsa.pub|pgpass|pem|key|shadow)'''
+
+[whitelist]
+	description = "image whitelists"
+	file = '''(.*?)(jpg|gif|doc|pdf|bin)$'''
