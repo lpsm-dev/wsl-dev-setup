@@ -133,3 +133,4 @@
 	files = ['''^\.?gitleaks.toml$''',
 	'''(.*?)(jpg|gif|doc|pdf|bin)$''',
 	'''(go.mod|go.sum)$''']
+  
