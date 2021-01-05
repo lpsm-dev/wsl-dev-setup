@@ -83,7 +83,7 @@ wget -q -O - https://raw.githubusercontent.com/canha/golang-tools-install-script
 
 #### Gitleaks
 
-```
+```bash
 VER="7.2.0"
 wget https://github.com/zricethezav/gitleaks/releases/download/v$VER/gitleaks-linux-amd64
 mv gitleaks-linux-amd64 gitleaks
@@ -106,9 +106,18 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v$VER/install.sh | bash
 
 #### Node
 
-```
+```bash
 NODE_VERSION="14.15.4"
 nvm install $NODE_VERSION --lts=Fermium --latest-npm && nvm use $NODE_VERSION
+```
+
+#### Yarn
+
+```bash
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+sudo apt-get update && sudo apt-get install --no-install-recommends yarn -y < /dev/null
+curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
 ```
 
 ## ➤ Features
