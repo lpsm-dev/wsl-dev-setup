@@ -1,5 +1,4 @@
 declare -A files
-KUBECONFIG="$HOME/.kube/config"
 
 files=(
   [CONFIG_AWS_PROD]=config-aws-prod
@@ -15,20 +14,6 @@ files=(
 )
 
 for key value in ${(kv)files}; do touch $HOME/.kube/$value && export $key=$HOME/.kube/$value && KUBECONFIG+=":$HOME/.kube/$value"; done
-
-# KUBECONFIG
-export KUBECONFIG=$KUBECONFIG
-
-# GOLANG
-export GOROOT=/home/lucca/.go
-export GOPATH=/home/lucca/go
-export GOBIN=$GOPATH/bin
-export PATH=$PATH:$GOROOT/bin:$GOPATH:$GOBIN
-
-# NVM
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # YARN
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
