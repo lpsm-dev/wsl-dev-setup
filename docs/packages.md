@@ -1,8 +1,19 @@
 # WSL Install Packages
 
-Lista com todos os pacotes utilizados por mim.
-
 ## General
+
+#### PYENV
+
+```bash
+curl https://pyenv.run | bash
+```
+
+#### RMV
+
+```bash
+curl -sSL https://get.rvm.io | bash
+source /etc/profile.d/rvm.sh
+```
 
 #### NVM
 
@@ -69,6 +80,20 @@ wget -q -O - https://raw.githubusercontent.com/canha/golang-tools-install-script
 ```bash
 NODE_VERSION="14.15.4"
 nvm install $NODE_VERSION --lts=Fermium --latest-npm && nvm use $NODE_VERSION
+```
+
+#### Python
+
+```bash
+PTYHON_VERSION="3.9.1"
+pyenv install $PYTHON_VERSION && pyenv global $PYTHON_VERSION
+```
+
+#### Ruby
+
+```bash
+RUBY_VERSION="3.0.0"
+rvm install $RUBY_VERSION && rvm use $RUBY_VERSION
 ```
 
 ## Git
