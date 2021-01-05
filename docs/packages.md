@@ -85,8 +85,7 @@ nvm install $NODE_VERSION --lts=Fermium --latest-npm && nvm use $NODE_VERSION
 #### Python
 
 ```bash
-PTYHON_VERSION="3.9.1"
-pyenv install $PYTHON_VERSION && pyenv global $PYTHON_VERSION
+pyenv install -v 3.9.1 && pyenv global 3.9.1
 ```
 
 #### Ruby

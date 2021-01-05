@@ -1,6 +1,5 @@
 # Kubernetes
-KUBECONFIG_PATH="$HOME/.kube"
-KUBECONFIG="$KUBECONFIG_PATH/config"
+export KUBECONFIG=$HOME/.kube/config
 
 # GoLang
 export GOROOT=/root/.go
@@ -18,6 +17,11 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # KREW
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
+# Pyenv
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 # Load if existent.
 [ -f "$HOME/.setup/bash" ] && source "$HOME/.setup/bash"

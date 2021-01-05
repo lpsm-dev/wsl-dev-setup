@@ -42,8 +42,8 @@ NODE_VERSION="12.18.3"
 RUBY_VERSION="2.7.1"
 GOLANG_VERSION="1.15.2"
 
-source ./config/common.sh
-source ./config/initial.sh
+source ./settings/common.sh
+source ./settings/initial.sh
 source ./packages/go.sh
 source ./packages/hashicorp.sh
 source ./packages/k8s.sh
