@@ -40,7 +40,7 @@ This will give access on your **local machine**.
 
 ## ➤ Description
 
-Template description.
+Para mais informações [acesse](./docs/packages.md).
 
 ## ➤ Features
 
