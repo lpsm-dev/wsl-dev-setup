@@ -28,9 +28,7 @@ If you want use this repository you need to make a **git clone**:
 
 This will give access on your **local machine**.
 
-## ➤ Description
-
-#### Stack
+## ➤ Tools
 
 * Ubuntu
 * ZSH
@@ -40,25 +38,11 @@ This will give access on your **local machine**.
 * GoLang
 * OH MY ZSH + Zinit + Plugins + Themes
 
-#### Kraw Install
+## ➤ Description
 
-* kubectl krew install ctx
-* kubectl krew install ns
+Template description.
 
-#### YQ install
-
-```
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys CC86BB64
-sudo add-apt-repository ppa:rmescandon/yq
-sudo apt update
-sudo apt install yq -y
-```
-
-#### TruffleHog install
-
-```
-pip install truffleHog
-```
+## ➤ Install
 
 #### GitHub CLI
 

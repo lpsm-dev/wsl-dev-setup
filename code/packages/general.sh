@@ -18,7 +18,7 @@ function InstallCommonDependencies(){
 
 function InstallDevDependencies(){
   Status "👾 Install initial dev Dependencies"
-  local dependencies="build-essential libssl-dev libffi-dev \
+  local dependencies="software-properties-common build-essential libssl-dev libffi-dev \
     apt-transport-https zlib1g-dev libreadline-dev libyaml-dev \
     libsqlite3-dev libxml2-dev libxslt1-dev libcurl4-openssl-dev libedit-dev"
   sudo apt install $dependencies
