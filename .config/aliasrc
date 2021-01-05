@@ -1,7 +1,47 @@
 # ALIAS - GENERAL
+alias -- -="cd -"
+alias .2="cd ../.."
+alias .3="cd ../../.."
+alias .4="cd ../../../.."
+alias .5="cd ../../../../.."
 alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
 
-# ALIAS - KUBECTL COMMANDS
+alias last="last -a"
+alias free="free -m"
+
+alias grep="grep -E --color"
+alias mkdir="mkdir -pv"
+alias tf="tail -f"
+alias wl="wc -l"
+
+alias c="clear"
+alias cls="clear"
+
+alias cp="cp -v"
+alias cpr="cp -r"
+alias mv="mv -v"
+
+alias df="df -h"
+alias du="du -h"
+alias dus="du -s"
+
+alias tree="tree -C"
+
+alias dfind="find -type d -name"
+alias ffind="find -type f -name"
+
+alias rmpyc="find . -name "*.pyc" -exec rm -rf {} \; >> /dev/null 2>&1"
+alias rmlog="rm *.log;rm *.log.*"
+alias now="date +'%Y-%m-%d %T'"
+
+# ALIAS - GO
+alias gor="go run"
+alias gob="go build"
+
+# ALIAS - KUBECTL
 alias info="kubectl cluster-info"
 alias view="kubectl config view"
 alias contexts="kubectl config get-contexts"
@@ -10,3 +50,10 @@ alias ns="kubectl get ns"
 alias services="kubectl get services"
 alias nodes="kubectl get nodes"
 alias pods="kubectl get pods --all-namespaces"
+
+# ALIAS - GIT
+alias add="git add -A"
+alias status="git status"
+alias push="git push -u origin master"
+alias pull="git pull"
+alias log="git log"

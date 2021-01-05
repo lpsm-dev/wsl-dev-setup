@@ -18,3 +18,7 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # KREW
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
+# Load if existent.
+[ -f "$HOME/.setup/bash" ] && source "$HOME/.setup/bash"
+[ -f "$HOME/.setup/zsh" ] && source "$HOME/.setup/zsh"
