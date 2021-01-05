@@ -40,7 +40,11 @@ This will give access on your **local machine**.
 
 ## ➤ Description
 
-Para mais informações [acesse](./docs/packages.md).
+Neste repositório é construído uma organização para que se possa de forma rápida configurar um novo ambiente WSL. Temos arquivos de configuração e bash scripts trabalhando em conjunto para essa automação.
+
+## ➤ Install
+
+Para mais informações sobre os comandos de instalação dos pacotes utilizados,  [acesse](./docs/packages.md).
 
 ## ➤ Features
 
