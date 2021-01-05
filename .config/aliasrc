@@ -10,6 +10,3 @@ alias ns="kubectl get ns"
 alias services="kubectl get services"
 alias nodes="kubectl get nodes"
 alias pods="kubectl get pods --all-namespaces"
-
-# ALIAS - LAB
-alias git=lab
