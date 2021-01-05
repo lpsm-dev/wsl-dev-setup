@@ -42,16 +42,16 @@ NODE_VERSION="12.18.3"
 RUBY_VERSION="2.7.1"
 GOLANG_VERSION="1.15.2"
 
-source ./settings/common.sh
-source ./settings/initial.sh
-source ./install/go.sh
-source ./install/hashicorp.sh
-source ./install/k8s.sh
-source ./install/node.sh
-source ./install/ruby.sh
-source ./install/ohmyzsh.sh
-source ./install/python.sh
-source ./install/general.sh
+source ./config/common.sh
+source ./config/initial.sh
+source ./packages/go.sh
+source ./packages/hashicorp.sh
+source ./packages/k8s.sh
+source ./packages/node.sh
+source ./packages/ruby.sh
+source ./packages/ohmyzsh.sh
+source ./packages/python.sh
+source ./packages/general.sh
 
 # ==============================================================================
 # FUNCTIONS

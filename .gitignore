@@ -1,7 +1,17 @@
-# Node modules, package-lock and yarn.lock
-node_modules/
-package-lock.json
-yarn.lock
 
-# Ruby Gem
-Gemfile.lock
+# Always ignore files
+.DS_Store
+.vscode
+*.sublime-*
+*.lock
+*.txt
+.idea/*
+
+# NPM files
+node_modules
+npm-debug.log
+package-lock.json
+
+# Yarn files
+yarn.lock
+yarn-error.log

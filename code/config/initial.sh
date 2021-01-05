@@ -3,7 +3,6 @@
 # ==============================================================================
 ## DESCRIPTION: Initial functions
 ## AUTHOR: Lucca Pessoa da Silva Matos
-## DATE: 12.09.2020
 # ==============================================================================
 
 # ==============================================================================
@@ -11,7 +10,7 @@
 # ==============================================================================
 
 function InitialSetup () {
-  Status "👾 Initial setup - update and upgrade system"
+  echo "👾 Initial setup - update and upgrade system"
   sudo apt-get -y update
   sudo apt-get -y upgrade
   sudo apt-get -y dist-upgrade
@@ -21,55 +20,49 @@ function InitialSetup () {
 }
 
 function CreateFolders(){
-  Status "👾 Creating Folders"
+  echo "👾 Creating Folders"
   dirs=(
-    "$HOME/gitlab"
-    "$HOME/github"
-    "$HOME/work/stefanini"
-    "$HOME/work/stfcia"
-    "$HOME/study"
-    "$HOME/playground"
-    "$HOME/go"
     "$HOME/.kube"
     "$HOME/.ssh"
     "$HOME/.config"
+    "$HOME/go"
+    "$HOME/study"
+    "$HOME/playground"
+    "$HOME/git/gitlab"
+    "$HOME/git/github"
+    "$HOME/git/work/nuageit"
+    "$HOME/git/work/stefanini"
   )
-  for dir in "${dirs[@]}"; do Info "📝 Create folder $dir" && mkdir -p "$dir"; done
+  for dir in "${dirs[@]}"; do 
+    if [[ -d "$dir" ]]; then
+      echo "🚧 Directory $dir alredy exist"
+    else 
+      echo "📝 Create directory $dir" && mkdir -p "$dir"
+    fi
+  done
 }
 
 function CreateFiles(){
-  Status "👾 Creating Files"
+  echo "👾 Creating Files"
   files=(
-    "$HOME/.kube/config"
-    "$HOME/.kube/config-aws-prod"
-    "$HOME/.kube/config-aws-stage"
-    "$HOME/.kube/config-aws-sandbox"
-    "$HOME/.kube/config-aws-develop"
-    "$HOME/.kube/config-aws-labs"
-    "$HOME/.kube/config-cnb-prod"
-    "$HOME/.kube/config-gcp-develop"
-    "$HOME/.kube/config-itsm-develop"
-    "$HOME/.kube/config-itsm-prod"
-    "$HOME/.kube/config-nutanix-faas"
+    "$HOME/.gitconfig"
     "$HOME/.ssh/config"
     "$HOME/.config/aliasrc"
     "$HOME/.config/setup-bash"
     "$HOME/.config/setup-zsh"
-    "$HOME/.gitconfig"
-    "$HOME/work/stefanini/.gitconfig"
-    "$HOME/work/stfcia/.gitconfig"
+    "$HOME/git/work/stefanini/.gitconfig"
   )
   for file in "${files[@]}"; do
     if [ -f "$file" ]; then
-      Info "🚧 File $file alredy exist"
+      echo "🚧 File $file alredy exist"
     else
-      Info "📝 Create file $file" && touch $file
+      echo "📝 Create file $file" && touch $file
     fi
   done
 }
 
 function CreateSSHFiles(){
-  Status "👾 Creating SSH Files"
+  echo "👾 Creating SSH Files"
   declare -A ssh
   ssh=(
     ["$HOME/.ssh/id_rsa_github"]="luccapessoamatos@gmail.com"
@@ -79,9 +72,9 @@ function CreateSSHFiles(){
   )
   for file in "${!ssh[@]}"; do
     if [ -f "$file" ]; then
-      Info "🚧 SSH File $file alredy exist"
+      echo "🚧 SSH File $file alredy exist"
     else
-      Info "📝 Create SSH file $file" && ssh-keygen -f $file -t rsa -b 4096 -C ${ssh[${file}]} -q -N ""
+      echo "📝 Create SSH file $file" && ssh-keygen -f $file -t rsa -b 4096 -C ${ssh[${file}]} -q -N ""
     fi
   done
 }
