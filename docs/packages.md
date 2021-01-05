@@ -31,6 +31,32 @@ sudo apt-get update && sudo apt-get install --no-install-recommends yarn -y < /d
 curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
 ```
 
+## Cloud
+
+#### Azure CLI
+
+```bash
+curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+```
+
+#### Google CLI
+
+```
+echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
+curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
+sudo apt-get update && sudo apt-get install google-cloud-sdk -y
+```
+
+#### AWS CLI
+
+```
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+rm -rf ./aws
+rm -rf ./awscliv2.zip
+```
+
 ## Kubernetes
 
 #### Kubectl
