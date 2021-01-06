@@ -2,7 +2,9 @@
   "_comment": "this project is not a node.js one, package.json is just used to define some metadata",
   "scripts": {
     "cm": "git cz",
-    "secrets": "gitleaks --verbose --path=. --config-path=.gitleaks.toml"
+    "secrets": "gitleaks --verbose --path=. --config-path=.gitleaks.toml",
+    "release": "npx semantic-release --debug",
+    "release-debug": "npx semantic-release --dry-run --debug"
   },
   "husky": {
     "hooks": {
