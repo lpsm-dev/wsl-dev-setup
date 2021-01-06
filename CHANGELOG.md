@@ -1,5 +1,18 @@
 # Semantic Versioning Changelog
 
+## [1.1.0](https://github.com/lpmatos/wsl-dev-setup/compare/v1.0.0...v1.1.0) (2021-01-06)
+
+
+### Features
+
+* include branch in releaserc.json ([ad4bace](https://github.com/lpmatos/wsl-dev-setup/commit/ad4bace713ef034c0aba824cbb96ff01b0ebc582))
+* include more tools setup ([3e3dcd8](https://github.com/lpmatos/wsl-dev-setup/commit/3e3dcd88556ad62d37120f70a1b7f9855998f6b9))
+
+
+### Bug Fixes
+
+* semantic release config ([9d445de](https://github.com/lpmatos/wsl-dev-setup/commit/9d445dece843c8c0cbf943dfaf0192025000f725))
+
 ## 1.0.0 (2021-01-06)
 
 
