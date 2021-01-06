@@ -20,11 +20,9 @@
 
 If you want use this repository you need to make a **git clone**:
 
-
 >
 > 1. git clone --depth 1 https://github.com/lpmatos/wsl-dev-setup.git -b master
 >
-
 
 This will give access on your **local machine**.
 
@@ -40,11 +38,11 @@ This will give access on your **local machine**.
 
 ## ➤ Description
 
-Neste repositório é construído uma organização para que se possa de forma rápida configurar um novo ambiente WSL. Temos arquivos de configuração e bash scripts trabalhando em conjunto para essa automação.
+In this repository an organization is built that you can quickly configure a new WSL environment. We have configuration files and bash scripts working together for this automation.
 
 ## ➤ Install
 
-Para mais informações sobre os comandos de instalação dos pacotes utilizados,  [acesse](./docs/packages.md).
+For more information to the installation commands, [acess](./docs/packages.md).
 
 ## ➤ Features
 
@@ -90,7 +88,7 @@ Hey!! If you like this project or if you find some bugs feel free to contact me 
 
 >
 > * Email: luccapsm@gmail.com
-> * Website: https://github.com/lpmatos
+> * Website: [lpmatos](https://github.com/lpmatos)
 > * Github: [@lpmatos](https://github.com/lpmatos)
 > * GitLab: [@lpmatos](https://gitlab.com/lpmatos)
 > * LinkedIn: [@luccapessoa](https://www.linkedin.com/in/luccapessoa/)
@@ -102,4 +100,4 @@ Give a ⭐️ if this project helped you!
 
 ---
 
-_This README was generated with ❤️ by me_
+This README was generated with ❤️ by me
