@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+### [1.2.1](https://github.com/lpmatos/wsl-dev-setup/compare/v1.2.0...v1.2.1) (2021-01-06)
+
+
+### Docs
+
+* include database section mssql ([39018ae](https://github.com/lpmatos/wsl-dev-setup/commit/39018aed1bf4c727817c046e1de44ede9d187fdd))
+
 ## [1.2.0](https://github.com/lpmatos/wsl-dev-setup/compare/v1.1.0...v1.2.0) (2021-01-06)
 
 
