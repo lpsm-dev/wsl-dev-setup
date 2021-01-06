@@ -49,11 +49,11 @@ Para mais informações sobre os comandos de instalação dos pacotes utilizados
 ## ➤ Features
 
 * Default gitignore and editorconfig.
-* GitLeaks file.
-* Semantic Release + Plugins configuration to GitHub.
+* [GitLeaks](https://github.com/zricethezav/gitleaks) file - Scan for secrets using regex and entropy.
+* [Semantic Release](https://github.com/semantic-release/semantic-release) + Plugins configuration to GitHub.
 * NPM modules automation.
-  * Commitlint - Conventional Commits using a custom Angular Convention.
-  * Git Hooks with Husky.
+  * [Commitlint](https://github.com/conventional-changelog/commitlint) using [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
+  * Git Hooks with [Husky](https://github.com/typicode/husky).
 
 ## ➤ How to contribute
 
