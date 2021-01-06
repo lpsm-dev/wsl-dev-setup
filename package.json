@@ -3,8 +3,8 @@
   "scripts": {
     "cm": "git cz",
     "secrets": "gitleaks --verbose --path=. --config-path=.gitleaks.toml",
-    "release": "npx semantic-release --debug",
-    "release-debug": "npx semantic-release --dry-run --debug"
+    "release": "npx semantic-release --no-ci",
+    "release-debug": "npx semantic-release --dry-run --no-ci --debug"
   },
   "husky": {
     "hooks": {
