@@ -32,7 +32,6 @@
       ]}
     }],
     ["@semantic-release/github", {
-      "githubUrl": "https://github.com",
       "addReleases": "top"
     }],
     ["@semantic-release/changelog", {

@@ -20,7 +20,7 @@
     "@semantic-release/changelog": "latest",
     "@semantic-release/commit-analyzer": "latest",
     "@semantic-release/git": "latest",
-    "@semantic-release/gitlab": "latest",
+    "@semantic-release/github": "latest",
     "@semantic-release/release-notes-generator": "latest",
     "commitizen": "latest",
     "husky": "latest",
