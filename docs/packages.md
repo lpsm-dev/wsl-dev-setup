@@ -5,7 +5,7 @@
 ### Common
 
 ```bash
-apt install curl figlet zsh tree fzf unzip s3cmd make htop git-lfs -y
+apt install curl figlet tree fzf unzip s3cmd make htop git-lfs -y
 ```
 
 ### Dev
@@ -14,6 +14,29 @@ apt install curl figlet zsh tree fzf unzip s3cmd make htop git-lfs -y
 apt software-properties-common build-essential libssl-dev libffi-dev \
     apt-transport-https zlib1g-dev libreadline-dev libyaml-dev \
     libsqlite3-dev libxml2-dev libxslt1-dev libcurl4-openssl-dev libedit-dev -y
+```
+
+## Terminal
+
+### ZSH
+
+```bash
+apt install zsh
+chsh -s $(which zsh)
+```
+
+#### Oh My ZSH
+
+```bash
+if [ ! -d ~/.oh-my-zsh ]; then
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --keep-zshrc --unattended
+fi
+```
+
+#### Zinit
+
+```bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
 ```
 
 ## Lint
