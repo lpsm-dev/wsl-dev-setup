@@ -15,7 +15,7 @@ export NVM_DIR="$HOME/.nvm"
 # Yarn
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
-# Krew
+# KREW
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 # Pyenv
@@ -23,8 +23,13 @@ export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
-# Cargo
-export PATH="$HOME/.cargo/bin:$PATH"
+# Git
+export GITHUB_TOKEN=
+export GITLAB_TOKEN=
+
+# Rust + Cargo
+export PATH=$PATH:$HOME/.cargo/bin
+source "$HOME/.cargo/env"
 
 # Load if existent.
 [ -f "$HOME/.setup/bash" ] && source "$HOME/.setup/bash"
