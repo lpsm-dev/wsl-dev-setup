@@ -2,27 +2,27 @@
 
 ## General
 
-#### PYENV
+### Pyenv
 
 ```bash
 curl https://pyenv.run | bash
 ```
 
-#### RMV
+### Rmv
 
 ```bash
 curl -sSL https://get.rvm.io | bash
 source /etc/profile.d/rvm.sh
 ```
 
-#### NVM
+### Nvm
 
 ```bash
 VER="0.37.2"
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v$VER/install.sh | bash
 ```
 
-#### Yarn
+### Yarn
 
 ```bash
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
@@ -33,13 +33,13 @@ curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
 
 ## Cloud
 
-#### Azure CLI
+### Azure CLI
 
 ```bash
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 ```
 
-#### Google CLI
+### Google CLI
 
 ```
 echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
@@ -47,7 +47,7 @@ curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyr
 sudo apt-get update && sudo apt-get install google-cloud-sdk -y
 ```
 
-#### AWS CLI
+### AWS CLI
 
 ```
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
@@ -59,7 +59,7 @@ rm -rf ./awscliv2.zip
 
 ## Kubernetes
 
-#### Kubectl
+### Kubectl
 
 ```bash
 sudo apt-get update && sudo apt-get install -y apt-transport-https gnupg2 curl
@@ -69,19 +69,19 @@ sudo apt-get update
 sudo apt-get install -y kubectl
 ```
 
-#### Helm
+### Helm
 
 ```bash
 curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
 ```
 
-#### K3D
+### K3D
 
 ```bash
 curl -s https://raw.githubusercontent.com/rancher/k3d/main/install.sh | bash
 ```
 
-#### Krew
+### Krew
 
 ```bash
 (
@@ -95,26 +95,26 @@ curl -s https://raw.githubusercontent.com/rancher/k3d/main/install.sh | bash
 
 ## Languages
 
-#### Golang
+### Golang
 
 ```bash
 wget -q -O - https://raw.githubusercontent.com/canha/golang-tools-install-script/master/goinstall.sh | bash
 ```
 
-#### Node
+### Node
 
 ```bash
 NODE_VERSION="14.15.4"
 nvm install $NODE_VERSION --lts=Fermium --latest-npm && nvm use $NODE_VERSION
 ```
 
-#### Python
+### Python
 
 ```bash
 pyenv install -v 3.9.1 && pyenv global 3.9.1
 ```
 
-#### Ruby
+### Ruby
 
 ```bash
 RUBY_VERSION="3.0.0"
@@ -123,7 +123,7 @@ rvm install $RUBY_VERSION && rvm use $RUBY_VERSION
 
 ## Git
 
-#### GitHub CLI
+### GitHub CLI
 
 ```bash
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
@@ -132,7 +132,7 @@ sudo apt update
 sudo apt install gh
 ```
 
-#### Lab
+### Lab
 
 ```bash
 curl -s https://raw.githubusercontent.com/zaquestion/lab/master/install.sh | sudo bash
@@ -140,7 +140,7 @@ curl -s https://raw.githubusercontent.com/zaquestion/lab/master/install.sh | sud
 
 ## Security
 
-#### Gitleaks
+### Gitleaks
 
 ```bash
 VER="7.2.0"

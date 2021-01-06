@@ -50,9 +50,9 @@ Para mais informações sobre os comandos de instalação dos pacotes utilizados
 
 * Default gitignore and editorconfig.
 * GitLeaks file.
-* Semantic Release file.
+* Semantic Release + Plugins configuration to GitHub.
 * NPM modules automation.
-  * Commitlint - Conventional Commits.
+  * Commitlint - Conventional Commits using a custom Angular Convention.
   * Git Hooks with Husky.
 
 ## ➤ How to contribute
