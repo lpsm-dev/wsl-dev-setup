@@ -228,3 +228,11 @@ sudo ./aws/install
 rm -rf ./aws
 rm -rf ./awscliv2.zip
 ```
+
+## Database
+
+### MSSQL
+
+```bash
+pip install mssql-cli
+```
