@@ -1,5 +1,15 @@
 # Semantic Versioning Changelog
 
+## [1.2.0](https://github.com/lpmatos/wsl-dev-setup/compare/v1.1.0...v1.2.0) (2021-01-06)
+
+
+### Features
+
+* include wsl setup echo ([7f2833b](https://github.com/lpmatos/wsl-dev-setup/commit/7f2833b263b3c20101f17b4d5cd1ffe74529953e))
+* mssql cli config ([ef8d53e](https://github.com/lpmatos/wsl-dev-setup/commit/ef8d53e427858645e67bba49b286fb08f50e025a))
+* oh my zsh files ([9ab3eec](https://github.com/lpmatos/wsl-dev-setup/commit/9ab3eec39ea466e8425ad61fb8e8be1abb69fc42))
+* setup windows ps1 ([53cfac1](https://github.com/lpmatos/wsl-dev-setup/commit/53cfac11e7678d170b1544e920c3d7b281c9c43a))
+
 ## [1.1.0](https://github.com/lpmatos/wsl-dev-setup/compare/v1.0.0...v1.1.0) (2021-01-06)
 
 
