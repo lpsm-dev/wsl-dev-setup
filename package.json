@@ -1,5 +1,6 @@
 {
   "_comment": "this project is not a node.js one, package.json is just used to define some metadata",
+  "main": ".releaserc.json",
   "scripts": {
     "cm": "git cz",
     "secrets": "gitleaks --verbose --path=. --config-path=.gitleaks.toml",
