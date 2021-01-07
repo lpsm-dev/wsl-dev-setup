@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [1.3.0](https://github.com/lpmatos/wsl-dev-setup/compare/v1.2.1...v1.3.0) (2021-01-07)
+
+
+### Features
+
+* include gitlab k8s integration file and secrets ([06dba71](https://github.com/lpmatos/wsl-dev-setup/commit/06dba7193cf94686f0cd5021144d230abb8b06bf))
+
 ### [1.2.1](https://github.com/lpmatos/wsl-dev-setup/compare/v1.2.0...v1.2.1) (2021-01-06)
 
 
