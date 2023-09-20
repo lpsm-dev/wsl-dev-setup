@@ -1,13 +1,5 @@
 #!/usr/bin/env bash
 
-# ==============================================================================
-## DESCRIPTION: Ubuntu Setup Initial
-## AUTHOR: Lucca Pessoa da Silva Matos
-## DATE: 10.09.2020
-## RUN:
-##      > chmod +x ./initial.sh && bash initial.sh
-# ==============================================================================
-
 # This option will make the script exit when there is an error
 set -o errexit
 
